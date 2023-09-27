@@ -75,8 +75,7 @@ pipeline{
          stage('Artifactory upload Jfrog'){
          when { expression {  params.action == 'create' } }
             steps{
-               script{
-                   
+               script{    
                   uploadJfrog()
                }
             }
